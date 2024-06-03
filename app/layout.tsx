@@ -22,14 +22,9 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={inter.className}>
-      <ConvexClientProvider><ThemeProvider
-            attribute="class"
-            defaultTheme="system"
-            enableSystem
-            disableTransitionOnChange
-          >
-            <div><ModeToggle/></div>{children}</ThemeProvider>
-      <Toaster/></ConvexClientProvider></body>
+        <ConvexClientProvider>
+          <div></div>{children}
+          <Toaster /></ConvexClientProvider></body>
     </html>
   );
 }
